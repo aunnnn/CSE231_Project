@@ -1,0 +1,8 @@
+ret	1
+call	2
+ret	1
+alloca	1
+store	1
+call	2
+ret	1
+call	1
