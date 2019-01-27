@@ -1,0 +1,6 @@
+found return
+Instruction does not dominate all uses!
+  %5 = icmp ugt i32 %4, 5
+  call void @updateBranchInfo(i1 %5)
+in function _Z3fooj
+LLVM ERROR: Broken function found, compilation aborted!

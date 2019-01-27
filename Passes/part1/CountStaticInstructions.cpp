@@ -13,10 +13,7 @@ struct CountStaticInstructionsPass : public FunctionPass {
 
     std::map<std::string, int> instructions_counts;
 
-    errs() << "-----" << F.getName() << "\n";
-
     for (BasicBlock &BB : F) {
-      errs() << "BB:" << BB << "\n";
       for (Instruction &I : BB) {
         std::string Iname = I.getOpcodeName();
         if (instructions_counts.count(Iname) == 0) {

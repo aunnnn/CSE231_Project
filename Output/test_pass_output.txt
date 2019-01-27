@@ -1,38 +1,14 @@
------_Z3fooj
-BB:
-  %2 = alloca i32, align 4
-  %3 = alloca i32, align 4
-  store volatile i32 %0, i32* %2, align 4
-  store volatile i32 10, i32* %3, align 4
-  %4 = load volatile i32, i32* %2, align 4
-  %5 = icmp ugt i32 %4, 5
-  br i1 %5, label %6, label %9
-
-BB:
-; <label>:6:                                      ; preds = %1
-  %7 = load volatile i32, i32* %3, align 4
-  %8 = add i32 %7, 5
-  store volatile i32 %8, i32* %3, align 4
-  br label %12
-
-BB:
-; <label>:9:                                      ; preds = %1
-  %10 = load volatile i32, i32* %3, align 4
-  %11 = add i32 %10, 50
-  store volatile i32 %11, i32* %3, align 4
-  br label %12
-
-BB:
-; <label>:12:                                     ; preds = %9, %6
-  %13 = load volatile i32, i32* %3, align 4
-  %14 = load volatile i32, i32* %2, align 4
-  %15 = add i32 %13, %14
-  ret i32 %15
-
-add	3
-alloca	2
-br	3
-icmp	1
-load	5
+runOnFunction__cxx_global_var_init
+BB
+call	2
 ret	1
-store	4
+runOnFunctionmain
+BB
+alloca	1
+call	2
+ret	1
+store	1
+runOnFunction_GLOBAL__sub_I_HelloWorld.cpp
+BB
+call	1
+ret	1

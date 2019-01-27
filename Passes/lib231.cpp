@@ -179,6 +179,8 @@ void updateBranchInfo(bool taken) {
 extern "C" __attribute__((visibility("default")))
 void printOutInstrInfo() {
 
+  std::cerr << "printOutInstrInfoInvoked\n";
+
   for (std::map<uint32_t, uint32_t>::iterator it=instr_map.begin(); it!=instr_map.end(); ++it)
     std::cerr << mapCodeToName(it->first) << '\t' << it->second << '\n';
 
